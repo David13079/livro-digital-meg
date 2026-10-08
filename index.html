@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEG® 21ª Edição — Guia Oficial Digital da Gestão para Excelência | FNQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Top Navigation Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo-badge">
+        <div class="tangram-icon">
+          <span class="t-piece p1"></span>
+          <span class="t-piece p2"></span>
+          <span class="t-piece p3"></span>
+          <span class="t-piece p4"></span>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">MEG<span class="sup">®</span> 21ª EDIÇÃO</span>
+          <span class="brand-sub">FNQ • GUIA DE REFERÊNCIA DA GESTÃO PARA EXCELÊNCIA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="globalSearch" placeholder="Buscar no livro (fundamentos, ferramentas, ISO, TPS...)" autocomplete="off">
+        <span class="shortcut-badge">CTRL+K</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <nav class="nav-pills">
+        <button class="nav-pill active" data-tab="tab-livro">📖 Livro Oficial</button>
+        <button class="nav-pill" data-tab="tab-tangram">🧩 Tangram & Ciclo PDCL</button>
+        <button class="nav-pill" data-tab="tab-fundamentos">💎 8 Fundamentos</button>
+        <button class="nav-pill" data-tab="tab-glossario">📚 Glossários</button>
+        <button class="nav-pill highlight" data-tab="tab-notebooklm">🤖 NotebookLM & ISO/TPS</button>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="layout-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-label">ESTRUTURA DO GUIA</span>
+        <span class="edition-badge">100 Páginas • Integral</span>
+      </div>
+
+      <nav class="toc-nav">
+        <div class="toc-group">
+          <div class="toc-group-title">ABERTURA</div>
+          <a href="#expediente" class="toc-item">Ficha Catalográfica & ISBN</a>
+          <a href="#prefacio" class="toc-item">Prefácio (Marcos Bardagi)</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-group-title">CAPÍTULO 1 • INTRODUÇÃO</div>
+          <a href="#cap1-fnq" class="toc-item">1.1 Sobre a FNQ</a>
+          <a href="#cap1-meg" class="toc-item">1.2 O que é o MEG</a>
+          <a href="#cap1-tangram" class="toc-item">1.3 Diagrama Tangram</a>
+          <a href="#cap1-fundamentos" class="toc-item">1.4 Os Oito Fundamentos</a>
+          <a href="#cap1-processos" class="toc-item">1.5 Processos e Resultados</a>
+          <a href="#cap1-pdcl" class="toc-item">1.6 Ciclo PDCL e Gestão</a>
+          <a href="#cap1-interpretacao" class="toc-item">1.7 Como Interpretar</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-group-title">CAPÍTULO 2 • OS 8 FUNDAMENTOS</div>
+          <a href="#f1-pensamento" class="toc-item">F1: Pensamento Sistêmico</a>
+          <a href="#f2-partes" class="toc-item">F2: Compromisso Stakeholders</a>
+          <a href="#f3-aprendizado" class="toc-item">F3: Aprendizado e Inovação</a>
+          <a href="#f4-adaptabilidade" class="toc-item">F4: Adaptabilidade</a>
+          <a href="#f5-lideranca" class="toc-item">F5: Liderança Transformadora</a>
+          <a href="#f6-sustentavel" class="toc-item">F6: Desenvolvimento Sustentável</a>
+          <a href="#f7-processos" class="toc-item">F7: Orientação por Processos</a>
+          <a href="#f8-valor" class="toc-item">F8: Geração de Valor</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-group-title">CAPÍTULO 3 • GLOSSÁRIOS</div>
+          <a href="#cap3-termos" class="toc-item">Glossário de Termos</a>
+          <a href="#cap3-metodologias" class="toc-item">Glossário de Ferramentas</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-group-title">CAPÍTULO 4 • REFERÊNCIAS</div>
+          <a href="#cap4-bibliografia" class="toc-item">Referências Bibliográficas</a>
+          <a href="#cap4-remissivo" class="toc-item">Índice Remissivo</a>
+        </div>
+
+        <div class="toc-group special">
+          <div class="toc-group-title">INTEGRAÇÃO ESPECIAL</div>
+          <a href="#notebooklm-section" class="toc-item highlight">Dossiê NotebookLM + ISO + TPS</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Reader -->
+    <main class="content-viewer" id="contentViewer">
+
+      <!-- BANNER DE DESTAQUE -->
+      <section class="hero-banner">
+        <div class="hero-tag">DIGITALIZAÇÃO COMPLETA • EDIÇÃO OFICIAL DE REFERÊNCIA</div>
+        <h1 class="hero-title">Modelo de Excelência da Gestão<sup>®</sup> (MEG)</h1>
+        <p class="hero-subtitle">
+          Recriação fiel e integral da 21ª Edição do livro físico da <strong>Fundação Nacional da Qualidade (FNQ)</strong>, substituindo a cópia física em suporte digital interativo, com correlacionamento estratégico com <strong>ISO 9001:2015</strong> e <strong>Toyota Production System (TPS / Lean)</strong> para o <strong>Google NotebookLM</strong>.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-val">8</span>
+            <span class="stat-label">Fundamentos da Excelência</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">PDCL</span>
+            <span class="stat-label">Ciclo Evolutivo (Plan-Do-Check-Learn)</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">35+</span>
+            <span class="stat-label">Ferramentas e Metodologias</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val">1000 pts</span>
+            <span class="stat-label">Escala de Maturidade FNQ</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FICHA CATALOGRÁFICA & EXPEDIENTE -->
+      <article id="expediente" class="book-section">
+        <div class="section-tag">DOCUMENTAÇÃO OFICIAL</div>
+        <h2>Ficha Catalográfica e Ficha Técnica</h2>
+        <div class="card-glass metadata-box">
+          <div class="meta-row"><strong>Título:</strong> Guia de Referência da Gestão para Excelência — 21ª Edição</div>
+          <div class="meta-row"><strong>Instituição Editora:</strong> Fundação Nacional da Qualidade (FNQ) — São Paulo, SP, Brasil</div>
+          <div class="meta-row"><strong>ISBN:</strong> 978-85-8139-055-0</div>
+          <div class="meta-row"><strong>Extensão Física Original:</strong> 100 páginas</div>
+          <div class="meta-row"><strong>Propósito Central:</strong> Servir de guia de referência e autoavaliação contínua para empresas públicas e privadas de qualquer porte atingirem padrões de classe mundial.</div>
+          <div class="meta-row"><strong>Núcleo Técnico Responsável:</strong> Comitê de Avaliação de Critérios e Núcleos Temáticos de Especialistas da FNQ.</div>
+        </div>
+      </article>
+
+      <!-- PREFÁCIO -->
+      <article id="prefacio" class="book-section">
+        <div class="section-tag">ABERTURA INSTITUCIONAL</div>
+        <h2>Prefácio Oficial</h2>
+        <div class="quote-card">
+          <p>
+            "A FNQ, no ano de seu 25º aniversário, traz como missão imutável o aprimoramento da gestão das organizações brasileiras. A busca permanente pela excelência é o que nos move. Nesta 21ª edição do Modelo de Excelência da Gestão® (MEG), consolidamos uma ruptura conceitual positiva: o modelo deixa de ser visto como caixas isoladas para se tornar um <strong>ecossistema orgânico e adaptativo</strong>, materializado pelo Tangram."
+          </p>
+          <p>
+            "Ao adotar o ciclo <strong>PDCL (Plan, Do, Check, Learn)</strong>, garantimos não apenas a disciplina da rotina (controle), mas a capacidade indispensável de autorreflexão crítica, inovação de ruptura e aprendizagem organizacional. Agradecemos a todos os voluntários, examinadores do Prêmio Nacional da Qualidade (PNQ) e membros dos Núcleos Temáticos que tornaram este guia possível."
+          </p>
+          <div class="quote-author">
+            <strong>Marcos Bardagi</strong><br>
+            <span>Gerente de Portfólio, Operações e Conhecimento da FNQ</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 1 -->
+      <article id="cap1-fnq" class="book-section">
+        <div class="section-tag">CAPÍTULO 1 • INTRODUÇÃO</div>
+        <h2>1.1 Sobre a Fundação Nacional da Qualidade (FNQ)</h2>
+        <p>
+          Fundada em 1991 como Fundação para o Prêmio Nacional da Qualidade (FPNQ) e mais tarde adotando o nome de Fundação Nacional da Qualidade (FNQ), a instituição lidera o movimento pela competitividade e excelência das organizações brasileiras.
+        </p>
+        
+        <div class="timeline-container">
+          <div class="timeline-step">
+            <div class="time-dot">1992-1996</div>
+            <div class="time-content">
+              <h4>Gestão pela Qualidade Total (TQM)</h4>
+              <p>Inspiração direta no modelo americano Malcolm Baldrige National Quality Award (MBNQA).</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="time-dot">1997-2000</div>
+            <div class="time-content">
+              <h4>Business Excellence Model</h4>
+              <p>Abertura para modelos europeus (EFQM) e visão mais ampla do negócio.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="time-dot">2001-2002</div>
+            <div class="time-content">
+              <h4>Identidade Brasileira (MEG)</h4>
+              <p>Consolidação do modelo genuinamente brasileiro e criação do Critério Sociedade.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="time-dot">2003-2012</div>
+            <div class="time-content">
+              <h4>Sustentabilidade e Integração</h4>
+              <p>Forte integração de processos gerenciais, governança corporativa e responsabilidade socioambiental.</p>
+            </div>
+          </div>
+          <div class="timeline-step active">
+            <div class="time-dot">2016-Atual</div>
+            <div class="time-content">
+              <h4>21ª Edição: O Tangram Sistêmico & PDCL</h4>
+              <p>Foco em adaptabilidade, gestão para a transformação, inovação e orientação por redes colaborativas.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1.2 O QUE É O MEG -->
+      <article id="cap1-meg" class="book-section">
+        <h2>1.2 O Modelo de Excelência da Gestão® (MEG)</h2>
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="f-icon">🌐</div>
+            <h3>Modelo Integrador</h3>
+            <p>Conecta governança, estratégia, clientes, pessoas, processos, tecnologia e responsabilidade socioambiental em uma narrativa única.</p>
+          </div>
+          <div class="feature-card">
+            <div class="f-icon">🛡️</div>
+            <h3>Não Prescritivo</h3>
+            <p>Não prescreve softwares específicos, metodologias obrigatórias ou estruturas organizacionais rígidas. Define "o que é necessário", estimulando a empresa a encontrar seu "como".</p>
+          </div>
+          <div class="feature-card">
+            <div class="f-icon">📈</div>
+            <h3>Evolutivo por Maturidade</h3>
+            <p>Permite diagnosticar a organização em uma escala de maturidade de 0 a 1000 pontos, incentivando a melhoria contínua e a busca da classe mundial.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1.3 DIAGRAMA DO TANGRAM -->
+      <article id="cap1-tangram" class="book-section">
+        <h2>1.3 O Diagrama do MEG (O Tangram Sistêmico)</h2>
+        <p>
+          O quebra-cabeça do Tangram simboliza a capacidade de reorganizar as peças conforme as mudanças do ecossistema de negócios.
+        </p>
+
+        <div class="tangram-visual-container">
+          <div class="tangram-box">
+            <div class="tangram-inner">
+              <div class="t-block t-aprendizado">APRENDIZADO ORGANIZACIONAL E INOVAÇÃO (Círculo Integrador)</div>
+              <div class="t-grid-core">
+                <div class="t-cell f-adapt">ADAPTABILIDADE</div>
+                <div class="t-cell f-pensamento">PENSAMENTO SISTÊMICO</div>
+                <div class="t-cell f-sustent">DESENVOLVIMENTO SUSTENTÁVEL</div>
+                <div class="t-cell f-lideranca">LIDERANÇA TRANSFORMADORA</div>
+                <div class="t-cell f-partes">COMPROMISSO COM AS PARTES INTERESSADAS</div>
+                <div class="t-cell f-processos">ORIENTAÇÃO POR PROCESSOS</div>
+              </div>
+              <div class="t-block t-valor">GERAÇÃO DE VALOR (Alvo e Resultado)</div>
+            </div>
+          </div>
+
+          <div class="tangram-narrative card-glass">
+            <h4>Narrativa Canônica da FNQ:</h4>
+            <p class="highlight-quote">
+              "Considerando o <strong>Desenvolvimento Sustentável</strong> e o <strong>Compromisso com as Partes Interessadas</strong>, a <strong>Liderança Transformadora</strong>, a partir do <strong>Pensamento Sistêmico</strong>, define como as estratégias e os planos devem ser implementados e materializados por meio da <strong>Orientação por Processos</strong> e com <strong>Adaptabilidade</strong>, resultando em <strong>Geração de Valor</strong> para a própria organização e as partes interessadas. A partir disso, a organização busca evoluir por meio do <strong>Aprendizado Organizacional e Inovação</strong>, que permeiam todo o sistema, promovendo a excelência."
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1.4 OS OITO FUNDAMENTOS -->
+      <article id="cap1-fundamentos" class="book-section">
+        <h2>1.4 Os Oito Fundamentos da Gestão para Excelência</h2>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 80px;">Nº</th>
+                <th style="width: 240px;">Fundamento</th>
+                <th>Definição Oficial da FNQ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1</strong></td>
+                <td><strong class="text-accent">Pensamento Sistêmico</strong></td>
+                <td>Compreensão e tratamento das relações de interdependência e seus efeitos entre os diversos componentes da organização, bem como entre eles e o ambiente externo com o qual interagem.</td>
+              </tr>
+              <tr>
+                <td><strong>2</strong></td>
+                <td><strong class="text-accent">Compromisso com as Partes Interessadas</strong></td>
+                <td>Estabelecimento de relações de confiança e parcerias com as partes interessadas, buscando o atendimento equilibrado de suas necessidades e expectativas.</td>
+              </tr>
+              <tr>
+                <td><strong>3</strong></td>
+                <td><strong class="text-accent">Aprendizado Organizacional e Inovação</strong></td>
+                <td>Busca permanente de novos patamares de competência por meio da percepção, reflexão, avaliação e compartilhamento de conhecimentos e experiências, estimulando a criatividade.</td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td><strong class="text-accent">Adaptabilidade</strong></td>
+                <td>Flexibilidade e rapidez de resposta às mudanças do ambiente, mantendo o foco nas demandas das partes interessadas e antecipando-se a novos cenários.</td>
+              </tr>
+              <tr>
+                <td><strong>5</strong></td>
+                <td><strong class="text-accent">Liderança Transformadora</strong></td>
+                <td>Atuação dos líderes de forma inspiradora, exemplar e com constância de propósito, mobilizando as pessoas em torno dos valores, princípios e estratégias organizacionais.</td>
+              </tr>
+              <tr>
+                <td><strong>6</strong></td>
+                <td><strong class="text-accent">Desenvolvimento Sustentável</strong></td>
+                <td>Compromisso com a perenidade da organização nos âmbitos econômico, social e ambiental, considerando os impactos de suas operações na sociedade e no meio ambiente.</td>
+              </tr>
+              <tr>
+                <td><strong>7</strong></td>
+                <td><strong class="text-accent">Orientação por Processos</strong></td>
+                <td>Reconhecimento de que a organização é uma rede interligada de processos que agrega valor aos clientes e demais partes interessadas, maximizando a eficácia e a eficiência.</td>
+              </tr>
+              <tr>
+                <td><strong>8</strong></td>
+                <td><strong class="text-accent">Geração de Valor</strong></td>
+                <td>Alcance de resultados consistentes em níveis de excelência, equilibrando os retornos para todas as partes interessadas da cadeia de valor.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- 1.6 CICLO PDCL -->
+      <article id="cap1-pdcl" class="book-section">
+        <h2>1.6 O Ciclo PDCL: Controle e Aprendizado</h2>
+        <div class="pdcl-grid">
+          <div class="pdcl-card c-plan">
+            <div class="pdcl-letter">P</div>
+            <div class="pdcl-name">PLAN (Planejamento)</div>
+            <p>Definição de diretrizes, metas, processos, recursos e requisitos das partes interessadas. Alinhamento de padrões de trabalho com a visão estratégica.</p>
+          </div>
+          <div class="pdcl-card c-do">
+            <div class="pdcl-letter">D</div>
+            <div class="pdcl-name">DO (Execução)</div>
+            <p>Implementação dos processos de acordo com os padrões definidos. Cumprimento rigoroso das rotinas de trabalho com disciplina e monitoramento em tempo real.</p>
+          </div>
+          <div class="pdcl-card c-check">
+            <div class="pdcl-letter">C</div>
+            <div class="pdcl-name">CHECK (Controle)</div>
+            <p>Medição e avaliação sistemática dos indicadores de desempenho frente às metas, identificando desvios, falhas e conformidades através de auditorias e análises críticas.</p>
+          </div>
+          <div class="pdcl-card c-learn">
+            <div class="pdcl-letter">L</div>
+            <div class="pdcl-name">LEARN (Aprendizado)</div>
+            <p><strong>A Grande Inovação do MEG:</strong> Não é apenas corrigir erros pontuais. É o aprendizado de circuito duplo — questionar se o padrão atual ainda é válido e inovar para alcançar um novo patamar de excelência (breakthrough).</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 2: DETALHAMENTO DOS FUNDAMENTOS -->
+      <article id="detalhe-fundamentos" class="book-section">
+        <div class="section-tag">CAPÍTULO 2 • TABELAS OFICIAIS DE PROCESSOS E FERRAMENTAS</div>
+        <h2>Detalhamento Integral dos Fundamentos da Gestão</h2>
+
+        <!-- F1: Pensamento Sistêmico -->
+        <div id="f1-pensamento" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">01</span>
+            <div>
+              <h3>Fundamento 1: Pensamento Sistêmico</h3>
+              <p>Compreensão da interdependência interna e externa e tomada de decisão fundamentada em dados.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2"><strong>Alinhamento</strong></td>
+                    <td><strong>Estruturação do Modelo de Gestão</strong></td>
+                    <td>Definição conceitual dos fatores do modelo; inter-relação entre partes; regulamentação e comunicação do modelo a todos os públicos.</td>
+                    <td>14 Princípios de Deming, Análise de Stakeholders, BSC (Balanced Scorecard), Hoshin Kanri, BPM, Cadeia de Valor de Porter, Sistemas Complexos Adaptativos (CAS).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Atuação em Rede</strong></td>
+                    <td>Desenvolvimento de cooperação mútua com organizações complementares; compartilhamento de riscos e recursos em arranjos produtivos.</td>
+                    <td>Matriz de Materialidade (GRI), Modelo de Negócios CANVAS, Sistemas de Co-criação e Inovação Aberta.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><strong>Tomada de Decisão</strong></td>
+                    <td><strong>Estruturação do Sistema de Medição</strong></td>
+                    <td>Definição de indicadores estratégicos, táticos e operacionais; atributos claros (fórmula, fonte, frequência, metas, responsáveis); benchmarks.</td>
+                    <td>Painel de Bordo / Dashboards, Metodologia SMART, KPIs, Seis Sigma (Métricas DMAIC).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Identificação e Uso das Informações</strong></td>
+                    <td>Garantia de confiabilidade, rastreabilidade e segurança dos dados; análise de riscos; decisões tomadas com base em fatos e evidências reais.</td>
+                    <td>Business Intelligence (BI), Análise SWOT (FOFA), Matriz GUT, COSO (Gestão de Riscos), ABNT NBR ISO 31000, MASP, Reuniões de Análise Crítica (RAC).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F2: Compromisso com as Partes Interessadas -->
+        <div id="f2-partes" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">02</span>
+            <div>
+              <h3>Fundamento 2: Compromisso com as Partes Interessadas</h3>
+              <p>Foco contínuo nas necessidades de clientes, trabalhadores, fornecedores, parceiros e sociedade.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Requisitos</strong></td>
+                    <td>Identificação e Priorização de Requisitos</td>
+                    <td>Mapeamento ativo dos anseios implícitos e explícitos de cada grupo de stakeholders; ponderação de interesses conflitantes.</td>
+                    <td>Matriz de Poder/Influência, Pesquisa de Mercado, Diagrama de Pareto, QFD (Desdobramento da Função Qualidade), Focus Groups.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Relacionamento</strong></td>
+                    <td>Canais e Tratamento de Manifestações</td>
+                    <td>Canais bidirecionais de contato; ouvidoria; agilidade na solução de reclamações; uso dos feedbacks para melhorar processos.</td>
+                    <td>CRM (Customer Relationship Management), Código de Ética e Conduta, Ouvidoria, Pesquisas de Satisfação.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cliente</strong></td>
+                    <td>Segmentação e Gestão da Marca</td>
+                    <td>Compreensão do cliente-alvo; acompanhamento do ciclo de vida do cliente; medição de lealdade e retenção.</td>
+                    <td>Net Promoter Score (NPS), Matriz BCG, 4 Ps e 5 Cs do Marketing, Time to Market.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fornecedores</strong></td>
+                    <td>Desenvolvimento da Cadeia de Suprimentos</td>
+                    <td>Homologação, qualificação por critérios técnicos e ESG; contratos de risco; parceria para melhoria contínua e logística integrada.</td>
+                    <td>Acordos de Nível de Serviço (SLA), Just-in-Time (JIT), E-Procurement, Logística Reversa, Auditorias de Fornecedores.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Força de Trabalho</strong></td>
+                    <td>Gestão de Pessoas e QVT</td>
+                    <td>Atração por competências e valores; clima organizacional; desenvolvimento de liderança; saúde, segurança e bem-estar (QVT).</td>
+                    <td>Avaliação 360°, Pesquisa de Clima Organizacional, Planos de Desenvolvimento Individual (PDI), Mentoring, Coaching.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F3: Aprendizado Organizacional e Inovação -->
+        <div id="f3-aprendizado" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">03</span>
+            <div>
+              <h3>Fundamento 3: Aprendizado Organizacional e Inovação</h3>
+              <p>Capacidade de transformar dados e experiências em novos conhecimentos, patamares e inovações.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Aperfeiçoamento</strong></td>
+                    <td>Melhoria Contínua e Ruptura</td>
+                    <td>Diagnóstico de desvios; aplicação de ações preventivas e corretivas; disseminação de lições aprendidas em toda a empresa.</td>
+                    <td>Circuito Duplo do PDCA, MASP, Lean Manufacturing / Toyota TPS, Kaizen diário, CCQ (Círculos de Controle de Qualidade).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Conhecimento</strong></td>
+                    <td>Gestão do Capital Intelectual</td>
+                    <td>Identificação, retenção, proteção (propriedade intelectual) e difusão do conhecimento tácito e explícito.</td>
+                    <td>Modelo SECI de Nonaka & Takeuchi, Gestão do Conhecimento, Comunidades de Prática, Repositórios Corporativos.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Competências</strong></td>
+                    <td>Competências Essenciais do Negócio</td>
+                    <td>Mapeamento das capacidades centrais que geram diferenciação inimitável frente aos concorrentes; planos de capacitação contínua.</td>
+                    <td>Matriz VRIO (Jay Barney), Mapeamento de Competências Técnicas e Comportamentais.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Inovação</strong></td>
+                    <td>Gestão da Inovação e Ideação</td>
+                    <td>Ambiente favorável à experimentação com tolerância ao erro calculado; funil de inovação; mensuração do ROI de inovação.</td>
+                    <td>Design Thinking, Radar da Inovação (Sawhney), Stage-Gate (Cooper), Prototipagem Rápida, MVPs, Hackathons.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F4: Adaptabilidade -->
+        <div id="f4-adaptabilidade" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">04</span>
+            <div>
+              <h3>Fundamento 4: Adaptabilidade</h3>
+              <p>Prontidão para mudar com agilidade, superando resistências e mantendo o foco no valor.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Capacidade de Mudar</strong></td>
+                    <td>Gestão Estruturada da Mudança</td>
+                    <td>Identificação da necessidade de transformação; engajamento das pessoas; comunicação da mudança; minimização do estresse e resistência.</td>
+                    <td>Modelo ADKAR (Prosci), HCMBOK (Human Change Management), BSA (Behavioral Systems Analysis).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Flexibilidade</strong></td>
+                    <td>Prontidão para Resposta Rápida</td>
+                    <td>Desenho organizacional flexível; rápida realocação de recursos físicos e humanos frente a imprevistos mercadológicos.</td>
+                    <td>Teoria das Restrições (TOC - Goldratt), ABNT NBR ISO 22301 (Continuidade de Negócios), Heijunka (Nivelamento), Metodologias Ágeis.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F5: Liderança Transformadora -->
+        <div id="f5-lideranca" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">05</span>
+            <div>
+              <h3>Fundamento 5: Liderança Transformadora</h3>
+              <p>Liderança exemplar, ética sólida, governança corporativa e visão estratégica de futuro.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Valores e Princípios</strong></td>
+                    <td>Comportamento Ético e Compliance</td>
+                    <td>Definição e vivência dos valores organizacionais; combate a fraudes e assédio; liderança pelo exemplo prático.</td>
+                    <td>Código de Conduta, Canal de Denúncias, Diretrizes do IBGC, ABNT NBR ISO 37001 (Antissuborno).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Governança</strong></td>
+                    <td>Estrutura de Governança e Riscos</td>
+                    <td>Alçadas decisórias bem delimitadas; prestação de contas (accountability); transparência e proteção dos direitos dos sócios/acionistas.</td>
+                    <td>Boas Práticas de Governança (IBGC), Comitê de Auditoria, Matriz de Riscos Corporativos (COSO).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Olhar para o Futuro</strong></td>
+                    <td>Formulação e Desdobramento Estratégico</td>
+                    <td>Construção de cenários de curto, médio e longo prazos; formulação e desdobramento das estratégias com metas claras.</td>
+                    <td>5 Forças de Porter, Matriz PESTEL, Estratégia do Oceano Azul, Hoshin Kanri, BSC.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sucessão</strong></td>
+                    <td>Desenvolvimento de Líderes e Sucessores</td>
+                    <td>Mapeamento contínuo de sucessores para cargos críticos; programas formais de mentoria e formação de novos gestores.</td>
+                    <td>Matriz Nine Box (9-Box), Mentoring, Coaching Executivo, Mapa de Sucessão, Liderança Nível 5 (Jim Collins).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F6: Desenvolvimento Sustentável -->
+        <div id="f6-sustentavel" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">06</span>
+            <div>
+              <h3>Fundamento 6: Desenvolvimento Sustentável</h3>
+              <p>Equilíbrio econômico, conservação ambiental e desenvolvimento social justo (ESG / Triple Bottom Line).</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Econômico-Financeiro</strong></td>
+                    <td>Gestão Financeira e Rentabilidade</td>
+                    <td>Gestão de fluxo de caixa; disciplina orçamentária; controle de solvência e geração de valor residual aos investidores.</td>
+                    <td>EBITDA (LAJIDA), EVA (Economic Value Added), Fluxo de Caixa Livre, Ponto de Equilíbrio, Custeio ABC.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ambiental</strong></td>
+                    <td>Mitigação de Impactos e Ecoeficiência</td>
+                    <td>Consumo sustentável de recursos (água, energia); prevenção da poluição; logística reversa e descarte responsável de resíduos.</td>
+                    <td>ABNT NBR ISO 14001, Avaliação de Ciclo de Vida (ACV), Produção mais Limpa (P+L), Protocolo GHG (Gases de Efeito Estufa).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Social</strong></td>
+                    <td>Responsabilidade Social e Direitos Humanos</td>
+                    <td>Ações em benefício da comunidade; erradicação de trabalho infantil ou análogo; diversidade, inclusão e transparência.</td>
+                    <td>ABNT NBR ISO 26000 (Diretrizes de Responsabilidade Social), Indicadores Ethos, Relatórios de Sustentabilidade GRI.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F7: Orientação por Processos -->
+        <div id="f7-processos" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">07</span>
+            <div>
+              <h3>Fundamento 7: Orientação por Processos</h3>
+              <p>Modelagem da cadeia de valor, trabalho padronizado, qualidade assegurada e segurança da informação.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tema</th>
+                    <th>Processos Estruturantes</th>
+                    <th>Detalhamento Oficial (FNQ)</th>
+                    <th>Ferramentas e Metodologias Recomendadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Informações</strong></td>
+                    <td>Tecnologia e Segurança da Informação</td>
+                    <td>Disponibilidade de sistemas de TI para apoiar o negócio; controle de acessos; proteção contra ciberataques; conformidade legal (LGPD).</td>
+                    <td>ABNT NBR ISO/IEC 27001, COBIT, ITIL, CMMI, Arquitetura Corporativa de Dados.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gestão por Processos</strong></td>
+                    <td>Padronização e Controle de Processos</td>
+                    <td>Mapeamento ponta a ponta dos fluxos operacionais e de apoio; definição de donos de processo; eliminação sistemática de gargalos.</td>
+                    <td>BPMN, SIPOC, CEP (Controle Estatístico de Processo), FMEA, Kanban, Trabalho Padronizado (Lean), 5S.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Produto</strong></td>
+                    <td>Desenvolvimento e Ciclo de Vida</td>
+                    <td>Planejamento e concepção de novos produtos garantindo a voz do cliente desde o início; garantia de manufaturabilidade.</td>
+                    <td>APQP, QFD, Engenharia de Valor, Stage-Gate, Design for Six Sigma (DFSS).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- F8: Geração de Valor -->
+        <div id="f8-valor" class="fundamento-block">
+          <div class="fundamento-header">
+            <span class="f-num">08</span>
+            <div>
+              <h3>Fundamento 8: Geração de Valor (Resultados Sustentáveis)</h3>
+              <p>Comprovação objetiva de resultados de excelência em todas as dimensões da cadeia de valor.</p>
+            </div>
+          </div>
+          <div class="fundamento-body">
+            <div class="grid-2">
+              <div class="card-glass">
+                <h4>Indicadores Requeridos (Mínimo 3 Ciclos Históricos):</h4>
+                <ul class="bullet-list">
+                  <li><strong>Econômico-Financeiros:</strong> Margem EBITDA, Liquidez Corrente, ROIC, Giro do Ativo, Geração de Caixa.</li>
+                  <li><strong>Ambientais:</strong> Consumo específico de água/energia por produto, índice de reciclagem de resíduos sólidos, emissões de CO2.</li>
+                  <li><strong>Sociais:</strong> Investimento social, taxa de contratação PCD e jovens aprendizes, conformidade fiscal e jurídica.</li>
+                  <li><strong>Clientes & Mercado:</strong> Net Promoter Score (NPS), índice de retenção, tempo médio de resposta (SLA), market share.</li>
+                  <li><strong>Força de Trabalho:</strong> Clima organizacional, taxa de turnover, taxa de frequência/gravidade de acidentes, horas de treinamento por colaborador.</li>
+                  <li><strong>Fornecedores:</strong> On-Time In-Full (OTIF), índice de homologação sustentável, índice de não conformidades.</li>
+                  <li><strong>Processos & Produtos:</strong> OEE (Eficiência Global de Equipamentos), taxa de retrabalho e refugo (PPM), produtividade homem-hora.</li>
+                </ul>
+              </div>
+
+              <div class="card-glass">
+                <h4>Critérios de Pontuação e Avaliação de Resultados (FNQ):</h4>
+                <div class="eval-factor">
+                  <strong>Relevância:</strong> Os indicadores medem os processos mais críticos e os requisitos centrais do negócio?
+                </div>
+                <div class="eval-factor">
+                  <strong>Competitividade:</strong> Os resultados atingem ou superam os referenciais comparativos (benchmarks de mercado)?
+                </div>
+                <div class="eval-factor">
+                  <strong>Melhoria:</strong> Há evolução favorável e consistente ao longo dos últimos 3 a 5 anos?
+                </div>
+                <div class="eval-factor">
+                  <strong>Compromisso:</strong> As metas pactuadas com clientes e acionistas foram efetivamente batidas?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CAPÍTULO 3: GLOSSÁRIOS -->
+      <article id="cap3-glossarios" class="book-section">
+        <div class="section-tag">CAPÍTULO 3 • GLOSSÁRIOS DE EXCELÊNCIA</div>
+        <h2>Termos, Metodologias e Ferramentas Consagradas</h2>
+
+        <div class="glossary-filter-bar">
+          <input type="text" id="glossarySearch" placeholder="Filtrar termo ou ferramenta no glossário..." class="search-input">
+        </div>
+
+        <div class="glossary-grid" id="glossaryContainer">
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>Lean Manufacturing / Toyota TPS</h4>
+            <span class="tag-pill">Manufatura Enxuta</span>
+            <p>Filosofia e sistema de produção focado na eliminação integral de 7 desperdícios operacionais através dos pilares Just-in-Time (produzir na hora certa) e Jidoka (qualidade na fonte com parada imediata na detecção de defeitos).</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>Kaizen</h4>
+            <span class="tag-pill">Melhoria Contínua</span>
+            <p>Conceito japonês de evolução gradual e permanente envolvendo todos os níveis da empresa no Gemba (chão de fábrica), gerando melhorias de alto impacto com baixíssimo custo de investimento.</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>Hoshin Kanri</h4>
+            <span class="tag-pill">Desdobramento Estratégico</span>
+            <p>Metodologia de alinhamento estratégico da alta direção à operação utilizando o mecanismo de diálogo bidirecional (Catchball) para assegurar que cada operador saiba como suas tarefas contribuem para os objetivos de longo prazo.</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>Ciclo PDCL</h4>
+            <span class="tag-pill">Gestão FNQ</span>
+            <p>Evolução do PDCA incorporada na 21ª edição do MEG: Plan, Do, Check e Learn. O Learn (Aprender) promove a autorreflexão e a revisão periódica dos próprios padrões organizacionais.</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>Balanced Scorecard (BSC)</h4>
+            <span class="tag-pill">Estratégia</span>
+            <p>Sistema formulado por Kaplan & Norton que equilibra objetivos financeiros com medidas nas perspectivas de Clientes, Processos Internos e Aprendizado Organizacional.</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>FMEA (Failure Mode and Effects Analysis)</h4>
+            <span class="tag-pill">Engenharia da Qualidade</span>
+            <p>Metodologia analítica e preventiva para antecipar modos potenciais de falha em produtos e processos operacionais, priorizando riscos por Severidade, Ocorrência e Detecção (RPN).</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>QFD (Quality Function Deployment)</h4>
+            <span class="tag-pill">Voz do Cliente</span>
+            <p>A "Casa da Qualidade": método sistemático para traduzir desejos e anseios subjetivos dos clientes em especificações técnicas rigorosas de engenharia e manufatura.</p>
+          </div>
+          <div class="glossary-card" data-category="ferramenta">
+            <h4>ADKAR (Prosci)</h4>
+            <span class="tag-pill">Gestão da Mudança</span>
+            <p>Modelo centrado no indivíduo para guiar transições organizacionais com sucesso: Awareness (Consciência), Desire (Desejo), Knowledge (Conhecimento), Ability (Habilidade) e Reinforcement (Reforço).</p>
+          </div>
+          <div class="glossary-card" data-category="termo">
+            <h4>Tangram da Gestão</h4>
+            <span class="tag-pill">Conceito MEG</span>
+            <p>Representação gráfica das sete peças geométricas simbolizando que o sistema de gestão de uma organização é flexível e deve ser remodelado para enfrentar desafios dinâmicos de mercado.</p>
+          </div>
+          <div class="glossary-card" data-category="termo">
+            <h4>Ativos Intangíveis</h4>
+            <span class="tag-pill">Finanças & Gestão</span>
+            <p>Recursos não físicos que conferem valor econômico substancial e diferencial competitivo sustentável: marcas, patentes, banco de dados, cultura organizacional e conhecimento tácito dos colaboradores.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SEÇÃO ESPECIAL: NOTEBOOKLM + ISO 9001 + TPS -->
+      <article id="notebooklm-section" class="book-section special-section">
+        <div class="section-tag-gold">DOSSIÊ ESTRUTURADO PARA NOTEBOOKLM</div>
+        <h2>Correlação Tridimensional: MEG × ISO 9001:2015 × Toyota TPS</h2>
+        <p class="section-lead">
+          Documento mestre desenvolvido especialmente para ser adicionado como <strong>Fonte de Conhecimento (Source Document)</strong> no <strong>Google NotebookLM</strong>, permitindo consultas gerenciais avançadas com rigor analítico, zero alucinações e correlação prática entre normas, filosofia enxuta e maturidade de gestão.
+        </p>
+
+        <div class="integration-grid">
+          <div class="card-glass border-accent">
+            <h3>Como Adicionar ao seu NotebookLM (Passo a Passo)</h3>
+            <ol class="steps-list">
+              <li>Acesse o seu painel do Google NotebookLM: <a href="https://notebooklm.google.com" target="_blank" class="link-external">notebooklm.google.com</a> (com a sua conta logada).</li>
+              <li>Clique em <strong>"Novo Bloco de Notas"</strong> (New Notebook) e nomeie como <code>MEG 21ª Edição + ISO 9001 + Lean TPS</code>.</li>
+              <li>No painel de fontes, selecione <strong>"Fazer upload de arquivo"</strong> ou <strong>"Copiar texto"</strong>.</li>
+              <li>Selecione o arquivo gerado em seu computador: <br><code>C:\logs\livro-digital-meg\DOSSIE_NOTEBOOKLM_MEG_ISO9001_LEAN_TPS.md</code></li>
+              <li>Pronto! O NotebookLM fará a indexação semântica completa e estará pronto para gerar guias de estudo, áudios explicativos (Audio Overview) e responder a quaisquer dúvidas da equipe!</li>
+            </ol>
+          </div>
+
+          <div class="card-glass">
+            <h3>Os 3 Pilares em Ação Integrada</h3>
+            <div class="pillar-row">
+              <span class="p-badge blue">ISO 9001:2015</span>
+              <span><strong>A Salvaguarda e a Regra:</strong> Garante padronização, auditorias e mitigação de riscos contratuais.</span>
+            </div>
+            <div class="pillar-row">
+              <span class="p-badge red">Toyota TPS / Lean</span>
+              <span><strong>O Fluxo e o Chão de Fábrica:</strong> Elimina desperdícios, reduz o lead time e valoriza a ação no Gemba.</span>
+            </div>
+            <div class="pillar-row">
+              <span class="p-badge gold">MEG (FNQ)</span>
+              <span><strong>A Maturidade e a Estratégia:</strong> Conecta governança, inovação, sustentabilidade e adaptabilidade de longo prazo.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-glass mt-20">
+          <h3>Exemplos de Prompts Recomendados para Executar no NotebookLM:</h3>
+          <div class="prompt-chips">
+            <div class="prompt-chip">"Explique a sinergia entre o requisito 8 da ISO 9001 e o trabalho padronizado do Lean no MEG."</div>
+            <div class="prompt-chip">"Como o ciclo PDCL do MEG transforma o tradicional PDCA em uma ferramenta de inovação?"</div>
+            <div class="prompt-chip">"Crie uma matriz comparativa dos 8 desperdícios Lean com os Fundamentos de Excelência da FNQ."</div>
+            <div class="prompt-chip">"Desenhe uma rotina de reuniões diárias e auditorias para integrar a ISO 9001 com Kaizen no chão de fábrica."</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOOTER -->
+      <footer class="app-footer">
+        <p>Modelo de Excelência da Gestão® (MEG) é marca registrada da Fundação Nacional da Qualidade (FNQ).</p>
+        <p>Recriação digital autorizada para capacitação corporativa e aplicação executiva interna. 21ª Edição Oficial.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
